@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ทะเลชลบุรี - แหล่งรวมข้อมูลทะเลในจังหวัดชลบุรี</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>ทะเลชลบุรี</h1>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">หน้าแรก</a></li>
+          <li><a href="#about" class="nav-link">เกี่ยวกับ</a></li>
+          <li><a href="#beaches" class="nav-link">ชายหาด</a></li>
+          <li><a href="#attractions" class="nav-link">สถานที่ท่องเที่ยว</a></li>
+          <li><a href="#marine-life" class="nav-link">สัตว์ทะเล</a></li>
+          <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>ทะเลชลบุรี</h1>
+        <h2>สัมผัสความงดงามของทะเลไทย</h2>
+        <p>แหล่งรวมข้อมูลชายหาดและทะเลที่สวยงามในจังหวัดชลบุรี</p>
+        <a href="#beaches" class="btn">ค้นหาชายหาด</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">เกี่ยวกับทะเลชลบุรี</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              จังหวัดชลบุรีเป็นจังหวัดชายทะเลที่มีชื่อเสียงของประเทศไทย
+              ตั้งอยู่ในภาคตะวันออก
+              มีชายหาดที่สวยงามและแหล่งท่องเที่ยวทางทะเลมากมาย
+            </p>
+            <p>
+              เว็บไซต์นี้รวบรวมข้อมูลเกี่ยวกับชายหาด สถานที่ท่องเที่ยว
+              กิจกรรมทางทะเล
+              และข้อมูลที่เป็นประโยชน์สำหรับนักท่องเที่ยวที่สนใจมาเยือนทะเลชลบุรี
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <i class="fas fa-umbrella-beach"></i>
+              <h3>30+</h3>
+              <p>ชายหาด</p>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-fish"></i>
+              <h3>100+</h3>
+              <p>สายพันธุ์สัตว์ทะเล</p>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-hotel"></i>
+              <h3>200+</h3>
+              <p>ที่พัก</p>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-utensils"></i>
+              <h3>500+</h3>
+              <p>ร้านอาหาร</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beaches" class="beaches">
+      <div class="container">
+        <h2 class="section-title">ชายหาดยอดนิยม</h2>
+        <div class="beach-slider">
+          <div class="beach-card">
+            <div
+              class="beach-img"
+              style="background-image: url('images/pattaya-beach.jpg')"
+            ></div>
+            <div class="beach-info">
+              <h3>หาดพัทยา</h3>
+              <p>
+                ชายหาดที่มีชื่อเสียงระดับโลก
+                เหมาะสำหรับกิจกรรมทางน้ำและความบันเทิงยามค่ำคืน
+              </p>
+              <a href="#" class="btn-small" onclick="openBeachModal('pattaya')"
+                >ดูเพิ่มเติม</a
+              >
+            </div>
+          </div>
+          <div class="beach-card">
+            <div
+              class="beach-img"
+              style="background-image: url('images/bangsaen-beach.jpg')"
+            ></div>
+            <div class="beach-info">
+              <h3>หาดบางแสน</h3>
+              <p>
+                ชายหาดยอดนิยมใกล้กรุงเทพฯ
+                เหมาะสำหรับครอบครัวและนักท่องเที่ยวทั่วไป
+              </p>
+              <a href="#" class="btn-small" onclick="openBeachModal('bangsaen')"
+                >ดูเพิ่มเติม</a
+              >
+            </div>
+          </div>
+          <div class="beach-card">
+            <div
+              class="beach-img"
+              style="background-image: url('images/koh-larn.jpg')"
+            ></div>
+            <div class="beach-info">
+              <h3>เกาะล้าน</h3>
+              <p>เกาะสวยงามใกล้พัทยา มีชายหาดขาวละเอียดและน้ำทะเลใส</p>
+              <a href="#" class="btn-small" onclick="openBeachModal('kohlarn')"
+                >ดูเพิ่มเติม</a
+              >
+            </div>
+          </div>
+          <div class="beach-card">
+            <div
+              class="beach-img"
+              style="background-image: url('images/jomtien-beach.jpg')"
+            ></div>
+            <div class="beach-info">
+              <h3>หาดจอมเทียน</h3>
+              <p>ชายหาดยาวเหมาะสำหรับการพักผ่อนและกีฬาทางน้ำ</p>
+              <a href="#" class="btn-small" onclick="openBeachModal('jomtien')"
+                >ดูเพิ่มเติม</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button id="prev-beach" class="slider-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="next-beach" class="slider-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="attractions" class="attractions">
+      <div class="container">
+        <h2 class="section-title">สถานที่ท่องเที่ยวน่าสนใจ</h2>
+        <div class="attractions-grid">
+          <div
+            class="attraction-item"
+            onclick="openAttractionModal('sanctuary')"
+          >
+            <img src="images/sanctuary-of-truth.jpg" alt="ปราสาทสัจธรรม" />
+            <div class="attraction-overlay">
+              <h3>ปราสาทสัจธรรม</h3>
+              <p>
+                สถาปัตยกรรมไม้อันงดงามที่สร้างขึ้นเพื่อเป็นศูนย์รวมความเชื่อทางศาสนา
+              </p>
+            </div>
+          </div>
+          <div
+            class="attraction-item"
+            onclick="openAttractionModal('nongnooch')"
+          >
+            <img src="images/nong-nooch.jpg" alt="สวนนงนุช" />
+            <div class="attraction-overlay">
+              <h3>สวนนงนุช</h3>
+              <p>สวนพฤกษศาสตร์ขนาดใหญ่ที่มีการแสดงทางวัฒนธรรมและสวนสวยงาม</p>
+            </div>
+          </div>
+          <div
+            class="attraction-item"
+            onclick="openAttractionModal('underwater')"
+          >
+            <img
+              src="images/underwater-world.jpg"
+              alt="อันเดอร์วอเตอร์เวิลด์"
+            />
+            <div class="attraction-overlay">
+              <h3>อันเดอร์วอเตอร์เวิลด์</h3>
+              <p>พิพิธภัณฑ์สัตว์น้ำที่ใหญ่ที่สุดในเอเชียตะวันออกเฉียงใต้</p>
+            </div>
+          </div>
+          <div class="attraction-item" onclick="openAttractionModal('tiger')">
+            <img src="images/sriracha-tiger-zoo.jpg" alt="สวนเสือศรีราชา" />
+            <div class="attraction-overlay">
+              <h3>สวนเสือศรีราชา</h3>
+              <p>
+                สวนสัตว์ที่มีเสือและสัตว์นานาชนิด พร้อมการแสดงที่น่าตื่นเต้น
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="marine-life" class="marine-life">
+      <div class="container">
+        <h2 class="section-title">สัตว์ทะเลในชลบุรี</h2>
+        <div class="marine-content">
+          <div class="marine-text">
+            <p>
+              ทะเลชลบุรีเป็นแหล่งที่อยู่อาศัยของสัตว์ทะเลหลากหลายชนิด
+              ตั้งแต่ปลาสีสันสวยงาม ไปจนถึงสัตว์ทะเลขนาดใหญ่
+            </p>
+            <p>
+              การอนุรักษ์ระบบนิเวศทางทะเลเป็นสิ่งสำคัญเพื่อรักษาความหลากหลายทางชีวภาพและความสวยงามของทะเลชลบุรีให้คงอยู่ต่อไป
+            </p>
+            <a href="#" class="btn">เรียนรู้เพิ่มเติม</a>
+          </div>
+          <div class="marine-gallery">
+            <div
+              class="marine-item"
+              style="background-image: url('images/fish1.jpg')"
+            ></div>
+            <div
+              class="marine-item"
+              style="background-image: url('images/fish2.jpg')"
+            ></div>
+            <div
+              class="marine-item"
+              style="background-image: url('images/fish3.jpg')"
+            ></div>
+            <div
+              class="marine-item"
+              style="background-image: url('images/fish4.jpg')"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tourism-info" class="tourism-info">
+      <div class="container">
+        <h2 class="section-title">ข้อมูลการท่องเที่ยว</h2>
+        <div class="info-cards">
+          <div class="info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>ฤดูกาลท่องเที่ยว</h3>
+            <p>
+              ช่วงเวลาที่ดีที่สุดในการเยี่ยมชมทะเลชลบุรีคือระหว่างเดือนพฤศจิกายนถึงเมษายน
+              เมื่อทะเลสงบและอากาศดี
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-route"></i>
+            <h3>การเดินทาง</h3>
+            <p>
+              สามารถเดินทางจากกรุงเทพฯ โดยรถยนต์ประมาณ 1-2 ชั่วโมง
+              หรือโดยรถโดยสารประจำทางจากสถานีขนส่งเอกมัย
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-bed"></i>
+            <h3>ที่พัก</h3>
+            <p>
+              มีที่พักหลากหลายรูปแบบ ตั้งแต่โรงแรมหรู รีสอร์ทริมทะเล
+              ไปจนถึงโฮสเทลราคาประหยัด
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-utensils"></i>
+            <h3>อาหาร</h3>
+            <p>
+              อาหารทะเลสดใหม่เป็นไฮไลท์สำคัญ
+              พร้อมร้านอาหารมากมายตั้งแต่ระดับท้องถิ่นไปจนถึงร้านหรู
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+      <div class="container">
+        <h2>รับข่าวสารและโปรโมชั่น</h2>
+        <p>
+          ลงทะเบียนเพื่อรับข้อมูลล่าสุดเกี่ยวกับทะเลชลบุรี โปรโมชั่นที่พัก
+          และกิจกรรมท่องเที่ยว
+        </p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="อีเมลของคุณ" required />
+          <button type="submit" class="btn">สมัครรับข่าวสาร</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">ติดต่อเรา</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>ที่อยู่</h3>
+              <p>123 ถนนพัทยาใต้ เมืองพัทยา จังหวัดชลบุรี 20150</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <h3>โทรศัพท์</h3>
+              <p>038-123-456</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <h3>อีเมล</h3>
+              <p>info@chonburisea.com</p>
+            </div>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="ชื่อ" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="อีเมล" required />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="หัวข้อ" />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="ข้อความ" required></textarea>
+              </div>
+              <button type="submit" class="btn">ส่งข้อความ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>ทะเลชลบุรี</h2>
+            <p>แหล่งรวมข้อมูลทะเลในจังหวัดชลบุรี</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>เมนูหลัก</h3>
+              <ul>
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#about">เกี่ยวกับ</a></li>
+                <li><a href="#beaches">ชายหาด</a></li>
+                <li><a href="#attractions">สถานที่ท่องเที่ยว</a></li>
+              </ul>
+            </div>
+            <div class="footer-links-column">
+              <h3>ข้อมูลเพิ่มเติม</h3>
+              <ul>
+                <li><a href="#">แผนที่ท่องเที่ยว</a></li>
+                <li><a href="#">คำถามที่พบบ่อย</a></li>
+                <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                <li><a href="#">เงื่อนไขการใช้งาน</a></li>
+              </ul>
+            </div>
+            <div class="footer-links-column">
+              <h3>ติดต่อ</h3>
+              <ul>
+                <li><a href="#contact">ติดต่อเรา</a></li>
+                <li><a href="#">ร่วมงานกับเรา</a></li>
+                <li><a href="#">แจ้งปัญหา</a></li>
+                <li><a href="#">ข้อเสนอแนะ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ทะเลชลบุรี. สงวนลิขสิทธิ์ทั้งหมด.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Beach Modal -->
+    <div id="beachModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('beachModal')">&times;</span>
+        <div class="modal-header">
+          <h2 id="beachTitle"></h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-gallery">
+            <div class="main-image">
+              <img id="beachMainImage" src="/placeholder.svg" alt="" />
+            </div>
+            <div class="thumbnail-gallery" id="beachThumbnails"></div>
+          </div>
+          <div class="modal-info">
+            <div class="info-section">
+              <h3>รายละเอียด</h3>
+              <p id="beachDescription"></p>
+            </div>
+            <div class="info-section">
+              <h3>กิจกรรม</h3>
+              <ul id="beachActivities"></ul>
+            </div>
+            <div class="info-section">
+              <h3>ข้อมูลเพิ่มเติม</h3>
+              <div class="info-grid" id="beachInfo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attraction Modal -->
+    <div id="attractionModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('attractionModal')"
+          >&times;</span
+        >
+        <div class="modal-header">
+          <h2 id="attractionTitle"></h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-gallery">
+            <div class="main-image">
+              <img id="attractionMainImage" src="/placeholder.svg" alt="" />
+            </div>
+            <div class="thumbnail-gallery" id="attractionThumbnails"></div>
+          </div>
+          <div class="modal-info">
+            <div class="info-section">
+              <h3>รายละเอียด</h3>
+              <p id="attractionDescription"></p>
+            </div>
+            <div class="info-section">
+              <h3>ไฮไลท์</h3>
+              <ul id="attractionHighlights"></ul>
+            </div>
+            <div class="info-section">
+              <h3>ข้อมูลการเยี่ยมชม</h3>
+              <div class="info-grid" id="attractionInfo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
