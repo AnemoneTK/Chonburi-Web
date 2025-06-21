@@ -136,6 +136,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Modal Data
 const beachData = {
+  namsai: {
+    title: "หาดน้ำใส",
+    description:
+      "หาดน้ำใสเป็นชายหาดที่มีน้ำทะเลใสและสะอาด ตั้งอยู่ในอำเภอสัตหีบ จังหวัดชลบุรี เหมาะสำหรับการดำน้ำดูปะการังและพักผ่อนริมชายหาด มีพื้นที่ตั้งแคมป์และร้านอาหารเล็กๆ ริมโขดหิน",
+    activities: [
+      "ดำน้ำดูปะการัง",
+      "ดำน้ำตื้น (Snorkeling)",
+      "ตั้งแคมป์และกางเต็นท์",
+      "ถ่ายภาพวิวทะเล",
+      "ปิกนิกริมชายหาด",
+      "นั่งเรือชมชายฝั่ง",
+    ],
+    info: {
+      ระยะทาง: "160 กม. จากกรุงเทพฯ",
+      เวลาเดินทาง: "2 ชั่วโมง",
+      ค่าเข้าชม: "ฟรี (ค่าบริการอุปกรณ์ดำน้ำเริ่มต้น 200 บาท)",
+      เวลาเปิด: "8:00–18:00 น.",
+      ที่จอดรถ: "มีลานจอดรถฟรี",
+      สิ่งอำนวยความสะดวก: "ห้องน้ำ, ร้านกาแฟ, จุดให้เช่าอุปกรณ์ดำน้ำ",
+    },
+    images: [
+      "https://img.wongnai.com/p/1920x0/2024/07/06/e94082b1169442f1add401f92ec78ec0.jpg",
+      "https://img.wongnai.com/p/1920x0/2024/07/06/4c737a58e0724e3daae7a89f0a9edfe5.jpg",
+      "https://img.wongnai.com/p/1920x0/2024/07/06/26af5015e13b4669964b22ac7553e2a6.jpg",
+      "https://img.wongnai.com/p/1920x0/2024/07/06/841a09afe8aa4e95aee528bd64c5f0ab.jpg",
+    ],
+  },
+
+  nangram: {
+    title: "หาดนางรำ",
+    description:
+      "หาดนางรำตั้งอยู่ใกล้กับหาดน้ำใสในพื้นที่อำเภอสัตหีบ จังหวัดชลบุรี มีทรายสีทองละเอียด น้ำตื้นและช่วยให้เล่นน้ำได้ปลอดภัย เหมาะสำหรับครอบครัวและกิจกรรมทางน้ำเบาๆ",
+    activities: [
+      "เล่นน้ำทะเล",
+      "ปั่นจักรยานเส้นทางชายหาด",
+      "ขับเจ็ตสกี",
+      "นั่งเรือคายัค",
+      "ถ่ายรูปกับหินลักษณะสวยงาม",
+      "จัดปิกนิกริมชายหาด",
+    ],
+    info: {
+      ระยะทาง: "158 กม. จากกรุงเทพฯ",
+      เวลาเดินทาง: "2 ชั่วโมง",
+      ค่าเข้าชม: "ฟรี",
+      เวลาเปิด: "8:00–18:00 น.",
+      ที่จอดรถ: "มีลานจอดรถ",
+      สิ่งอำนวยความสะดวก: "ห้องน้ำ, ร้านจำหน่ายของที่ระลึก, จุดเช่าอุปกรณ์กีฬา",
+    },
+    images: [
+      "https://img.wongnai.com/p/1920x0/2018/06/14/cfe894c90c4c401e8baf300ee7d4a935.jpg",
+      "https://img.wongnai.com/p/1920x0/2024/05/24/f6ec89f020484fb9be3ac3ee8b65f98a.jpg",
+      "https://img.wongnai.com/p/1920x0/2025/03/06/70acc4887124430dba324ca8c70e6862.jpg",
+      "https://img.wongnai.com/p/1920x0/2019/09/07/f0e8053b90e1423e8e2c81f0d35a3499.jpg",
+    ],
+  },
+
   pattaya: {
     title: "หาดพัทยา",
     description:
@@ -150,19 +206,20 @@ const beachData = {
     ],
     info: {
       ระยะทาง: "147 กม. จากกรุงเทพฯ",
-      เวลาเดินทาง: "1.5-2 ชั่วโมง",
+      เวลาเดินทาง: "1.5–2 ชั่วโมง",
       ค่าเข้าชม: "ฟรี",
       เวลาเปิด: "24 ชั่วโมง",
       ที่จอดรถ: "มีบริการ",
       สิ่งอำนวยความสะดวก: "ห้องน้ำ, ร้านอาหาร, ที่พัก",
     },
     images: [
-      "images/pattaya-beach.jpg",
-      "images/pattaya-1.jpg",
-      "images/pattaya-2.jpg",
-      "images/pattaya-3.jpg",
+      "https://i0.wp.com/www.iurban.in.th/wp-content/uploads/2019/12/trave-pattaya-beach-1.jpg?w=2048&ssl=1",
+      "https://i0.wp.com/www.iurban.in.th/wp-content/uploads/2019/09/PATTAYA-Jiraz-87.jpg?resize=1200%2C900&ssl=1",
+      "https://kongthaijeen.com/wp-content/uploads/2023/03/188.jpg",
+      "https://storage-wp.thaipost.net/2022/09/%E0%B8%A1%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%871-%E0%B8%8A%E0%B8%B2%E0%B8%A2%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2.jpg",
     ],
   },
+
   bangsaen: {
     title: "หาดบางแสน",
     description:
@@ -184,12 +241,13 @@ const beachData = {
       สิ่งอำนวยความสะดวก: "ห้องน้ำ, ร้านอาหาร, ที่พัก",
     },
     images: [
-      "images/bangsaen-beach.jpg",
-      "images/bangsaen-1.jpg",
-      "images/bangsaen-2.jpg",
-      "images/bangsaen-3.jpg",
+      "https://s359.kapook.com/pagebuilder/4210880e-ff3b-4bfa-af8f-3e3ae011602d.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdYeHIk4lOs7MJxPapbK7-YdLxaczhVS4dOw&s",
+      "https://www.chillpainai.com/src/wewakeup/scoop/images/fbc1f32c84072f600be5440ae3236f85c845d186.jpg",
+      "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1675415100/blog/lqqqoaaor1hg4estbo9x.jpg",
     ],
   },
+
   kohlarn: {
     title: "เกาะล้าน",
     description:
@@ -207,16 +265,17 @@ const beachData = {
       เวลาเดินทาง: "45 นาที (เรือเฟอร์รี่)",
       ค่าเข้าชม: "ฟรี",
       ค่าเรือ: "30 บาท/คน",
-      เวลาเปิด: "6:00-18:00 น.",
+      เวลาเปิด: "6:00–18:00 น.",
       สิ่งอำนวยความสะดวก: "ห้องน้ำ, ร้านอาหาร, เช่าอุปกรณ์",
     },
     images: [
-      "images/koh-larn.jpg",
-      "images/kohlarn-1.jpg",
-      "images/kohlarn-2.jpg",
-      "images/kohlarn-3.jpg",
+      "https://pix10.agoda.net/geo/poi/142054/c71abd82345d2cafefd05dd65599fbcb.jpg?ca=19&ce=1&s=414x232&ar=16x9",
+      "https://roijang.com/wp-content/uploads/2022/07/view-koh-larn-pattaya.jpg",
+      "https://img.wongnai.com/p/1920x0/2020/08/21/61c3877e32314c4d86ed462d2fb499d7.jpg",
+      "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1679602430/blog/waqn2rx6ppowizxztkl1.jpg",
     ],
   },
+
   jomtien: {
     title: "หาดจอมเทียน",
     description:
@@ -238,10 +297,10 @@ const beachData = {
       สิ่งอำนวยความสะดวก: "ห้องน้ำ, ร้านอาหาร, ที่พัก",
     },
     images: [
-      "images/jomtien-beach.jpg",
-      "images/jomtien-1.jpg",
-      "images/jomtien-2.jpg",
-      "images/jomtien-3.jpg",
+      "https://roijang.com/wp-content/uploads/2023/10/shutterstock_723475513.jpg",
+      "https://sattahipcity.com/media/k2/items/cache/1d73e13563b8be946c0f00bab252d7ea_XL.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEHYw5uXmAXg701kmGv9DNu0FgCaS7VIuM3A&s",
+      "https://lh4.googleusercontent.com/proxy/NDrkEGvLN7OLk9LrxnLOJuGhUwl7brlJhBZMFLX58ShBQz1cY2tiemojON0gjL-QPfCsZv_RlBhW-mS2fyjzZr8jG9Xt073Bwtel",
     ],
   },
 };

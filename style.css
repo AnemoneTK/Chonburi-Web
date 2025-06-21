@@ -111,7 +111,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 20px;
 }
 
 .logo h1 {
@@ -172,7 +172,7 @@ header {
 .hero {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/hero-beach.jpg");
+    url("https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2024/03/%E0%B8%94%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B8%99%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-2024-05-23T122306.610.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -393,6 +393,7 @@ header {
 /* Marine Life Section */
 .marine-life {
   padding: 100px 0;
+  background-color: var(--light-gray);
 }
 
 .marine-content {
@@ -436,7 +437,7 @@ header {
 /* Tourism Info Section */
 .tourism-info {
   padding: 100px 0;
-  background-color: var(--light-gray);
+  /* background-color: var(--light-gray); */
 }
 
 .info-cards {
@@ -612,6 +613,7 @@ footer {
 
 .footer-content {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 50px;

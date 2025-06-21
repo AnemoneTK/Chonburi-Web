@@ -29,9 +29,9 @@
           <li><a href="#home" class="nav-link">หน้าแรก</a></li>
           <li><a href="#about" class="nav-link">เกี่ยวกับ</a></li>
           <li><a href="#beaches" class="nav-link">ชายหาด</a></li>
-          <li><a href="#attractions" class="nav-link">สถานที่ท่องเที่ยว</a></li>
+          <!-- <li><a href="#attractions" class="nav-link">สถานที่ท่องเที่ยว</a></li> -->
           <li><a href="#marine-life" class="nav-link">สัตว์ทะเล</a></li>
-          <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+          <!-- <li><a href="#contact" class="nav-link">ติดต่อ</a></li> -->
         </ul>
       </nav>
     </header>
@@ -94,62 +94,118 @@
           <div class="beach-card">
             <div
               class="beach-img"
-              style="background-image: url('images/pattaya-beach.jpg')"
+              style="
+                background-image: url('https://s359.kapook.com/pagebuilder/6c74ebb5-e9c7-4dc0-a1ab-775832650c65.jpg');
+              "
+            ></div>
+            <div class="beach-info">
+              <h3>หาดน้ำใส</h3>
+              <p>
+                ตั้งอยู่ในอำเภอสัตหีบ จังหวัดชลบุรี น้ำทะเลใสเย็นสดชื่น
+                เหมาะสำหรับว่ายน้ำ ดำน้ำตื้น และตั้งแคมป์ริมหาด
+              </p>
+              <a href="#" class="btn-small" onclick="openBeachModal('namsai')"
+                >ดูเพิ่มเติม</a
+              >
+            </div>
+          </div>
+
+          <div class="beach-card">
+            <div
+              class="beach-img"
+              style="
+                background-image: url('https://img.wongnai.com/p/1920x0/2018/06/14/cfe894c90c4c401e8baf300ee7d4a935.jpg');
+              "
+            ></div>
+            <div class="beach-info">
+              <h3>หาดนางรำ</h3>
+              <p>
+                ชายหาดทรายสีทองละเอียด น้ำตื้นไม่ลึกมาก ตั้งอยู่ในอำเภอสัตหีบ
+                เหมาะสำหรับครอบครัว ปิคนิค และเล่นน้ำ
+              </p>
+              <a href="#" class="btn-small" onclick="openBeachModal('nangram')"
+                >ดูเพิ่มเติม</a
+              >
+            </div>
+          </div>
+
+          <div class="beach-card">
+            <div
+              class="beach-img"
+              style="
+                background-image: url('https://dmc.tatdataapi.io/assets/da6afb8f-a7ac-487b-ba9b-da3a010aba74.jpeg');
+              "
             ></div>
             <div class="beach-info">
               <h3>หาดพัทยา</h3>
               <p>
-                ชายหาดที่มีชื่อเสียงระดับโลก
-                เหมาะสำหรับกิจกรรมทางน้ำและความบันเทิงยามค่ำคืน
+                ชายหาดใจกลางเมืองพัทยา จังหวัดชลบุรี ยาวประมาณ 3 กม.
+                เต็มไปด้วยกิจกรรมทางน้ำ ร้านอาหาร และบาร์ผับยามราตรี
               </p>
               <a href="#" class="btn-small" onclick="openBeachModal('pattaya')"
                 >ดูเพิ่มเติม</a
               >
             </div>
           </div>
+
           <div class="beach-card">
             <div
               class="beach-img"
-              style="background-image: url('images/bangsaen-beach.jpg')"
+              style="
+                background-image: url('https://mpics.mgronline.com/pics/Images/563000005860001.JPEG');
+              "
             ></div>
             <div class="beach-info">
               <h3>หาดบางแสน</h3>
               <p>
-                ชายหาดยอดนิยมใกล้กรุงเทพฯ
-                เหมาะสำหรับครอบครัวและนักท่องเที่ยวทั่วไป
+                ชายหาดยอดนิยมในอำเภอเมืองชลบุรี อยู่ใกล้กรุงเทพฯ
+                เหมาะสำหรับครอบครัว มีร้านอาหารทะเลและกิจกรรมชายหาด
               </p>
               <a href="#" class="btn-small" onclick="openBeachModal('bangsaen')"
                 >ดูเพิ่มเติม</a
               >
             </div>
           </div>
+
           <div class="beach-card">
             <div
               class="beach-img"
-              style="background-image: url('images/koh-larn.jpg')"
+              style="
+                background-image: url('https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2024/05/%E0%B8%94%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B8%99%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-2024-05-22T125922.412.png');
+              "
             ></div>
             <div class="beach-info">
               <h3>เกาะล้าน</h3>
-              <p>เกาะสวยงามใกล้พัทยา มีชายหาดขาวละเอียดและน้ำทะเลใส</p>
+              <p>
+                เกาะใกล้พัทยา เดินทางโดยเรือข้ามฟากประมาณ 30 นาที
+                มีชายหาดหลายแห่ง ทรายขาวละเอียด น้ำทะเลใสแจ๋ว
+              </p>
               <a href="#" class="btn-small" onclick="openBeachModal('kohlarn')"
                 >ดูเพิ่มเติม</a
               >
             </div>
           </div>
+
           <div class="beach-card">
             <div
               class="beach-img"
-              style="background-image: url('images/jomtien-beach.jpg')"
+              style="
+                background-image: url('https://th.readme.me/f/33434/5f2653c42c9ce65d70bd5510.jpg');
+              "
             ></div>
             <div class="beach-info">
               <h3>หาดจอมเทียน</h3>
-              <p>ชายหาดยาวเหมาะสำหรับการพักผ่อนและกีฬาทางน้ำ</p>
+              <p>
+                ตั้งอยู่ทางตอนใต้ของพัทยา ชายหาดยาวและเงียบสงบ
+                เหมาะสำหรับพักผ่อน เล่นบานานาโบ๊ท และกีฬาทางน้ำ
+              </p>
               <a href="#" class="btn-small" onclick="openBeachModal('jomtien')"
                 >ดูเพิ่มเติม</a
               >
             </div>
           </div>
         </div>
+
         <div class="slider-controls">
           <button id="prev-beach" class="slider-btn">
             <i class="fas fa-chevron-left"></i>
@@ -161,7 +217,7 @@
       </div>
     </section>
 
-    <section id="attractions" class="attractions">
+    <!-- <section id="attractions" class="attractions">
       <div class="container">
         <h2 class="section-title">สถานที่ท่องเที่ยวน่าสนใจ</h2>
         <div class="attractions-grid">
@@ -211,7 +267,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="marine-life" class="marine-life">
       <div class="container">
@@ -230,19 +286,27 @@
           <div class="marine-gallery">
             <div
               class="marine-item"
-              style="background-image: url('images/fish1.jpg')"
+              style="
+                background-image: url('https://thezootravel.com/wp-content/uploads/2023/09/P03013910_1-1024x682.jpeg');
+              "
             ></div>
             <div
               class="marine-item"
-              style="background-image: url('images/fish2.jpg')"
+              style="
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7yxZS4TIfybXbL9E2b5pZ6bcwBA1eo_W5UtW7D9k0-8fS7t0zoSISJdQEdo9JMM0zalk&usqp=CAU');
+              "
             ></div>
             <div
               class="marine-item"
-              style="background-image: url('images/fish3.jpg')"
+              style="
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSVNbc1X9N2rGhwG5aeZ3Rx5Of1I_tERecnA&s');
+              "
             ></div>
             <div
               class="marine-item"
-              style="background-image: url('images/fish4.jpg')"
+              style="
+                background-image: url('https://s359.kapook.com/pagebuilder/4a1025ea-35cc-46b3-a7dc-311b3061d270.jpg');
+              "
             ></div>
           </div>
         </div>
@@ -289,7 +353,7 @@
       </div>
     </section>
 
-    <section id="newsletter" class="newsletter">
+    <!-- <section id="newsletter" class="newsletter">
       <div class="container">
         <h2>รับข่าวสารและโปรโมชั่น</h2>
         <p>
@@ -301,9 +365,9 @@
           <button type="submit" class="btn">สมัครรับข่าวสาร</button>
         </form>
       </div>
-    </section>
+    </section> -->
 
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">ติดต่อเรา</h2>
         <div class="contact-content">
@@ -353,11 +417,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <footer>
       <div class="container">
         <div class="footer-content">
+          <h2 style="text-align: center">
+            “เปิดประสบการณ์ใหม่ ร่วมค้นพบความงามของทะเลชลบุรีไปด้วยกัน”
+          </h2>
+        </div>
+
+        <!-- <div class="footer-content">
           <div class="footer-logo">
             <h2>ทะเลชลบุรี</h2>
             <p>แหล่งรวมข้อมูลทะเลในจังหวัดชลบุรี</p>
@@ -391,7 +461,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="footer-bottom">
           <p>&copy; 2025 ทะเลชลบุรี. สงวนลิขสิทธิ์ทั้งหมด.</p>
         </div>
@@ -435,9 +505,7 @@
     <!-- Attraction Modal -->
     <div id="attractionModal" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeModal('attractionModal')"
-          >&times;</span
-        >
+        <span class="close" onclick="closeModal('attractionModal')">X</span>
         <div class="modal-header">
           <h2 id="attractionTitle"></h2>
         </div>
