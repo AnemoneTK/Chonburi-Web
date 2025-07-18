@@ -559,7 +559,7 @@ header {
   color: var(--primary-color);
   font-weight: 500;
   transition: var(--transition);
-  display: flex; /* ใช้ flex เพื่อจัดเรียงไอคอนกับข้อความ */
+  display: flex;
   align-items: center;
   gap: 10px;
   font-size: 1.1rem;
@@ -569,12 +569,11 @@ header {
   color: var(--dark-color);
 }
 
-/* === โค้ดที่แก้ไขสำหรับจัดตำแหน่งไอคอน === */
 .member-contact a i {
   color: var(--primary-color);
   font-size: 1.1rem;
-  width: 20px; /* กำหนดความกว้างคงที่ให้ไอคอน */
-  text-align: center; /* จัดให้ตัวไอคอนอยู่กึ่งกลางพื้นที่ที่กำหนด */
+  width: 20px;
+  text-align: center;
 }
 
 /* Footer */
