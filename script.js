@@ -162,6 +162,8 @@ const beachData = {
       "https://img.wongnai.com/p/1920x0/2024/07/06/26af5015e13b4669964b22ac7553e2a6.jpg",
       "https://img.wongnai.com/p/1920x0/2024/07/06/841a09afe8aa4e95aee528bd64c5f0ab.jpg",
     ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.6800393038225!2d100.94198647586882!3d12.603326422843862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31028b8ea8bcd8d7%3A0x4780c450656a024e!2z4Lir4Liy4LiU4LiZ4LmJ4Liz4LmD4Liq!5e0!3m2!1sth!2sth!4v1752870597515!5m2!1sth!2sth",
   },
 
   nangram: {
@@ -190,6 +192,8 @@ const beachData = {
       "https://img.wongnai.com/p/1920x0/2025/03/06/70acc4887124430dba324ca8c70e6862.jpg",
       "https://img.wongnai.com/p/1920x0/2019/09/07/f0e8053b90e1423e8e2c81f0d35a3499.jpg",
     ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1946.7164591735127!2d100.91690529839565!3d12.619580006383407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31028a4eb9f2d3fd%3A0x8e8135ae94f84160!2z4Lir4Liy4LiU4LiZ4Liy4LiH4Lij4Liz!5e0!3m2!1sth!2sth!4v1752870578304!5m2!1sth!2sth",
   },
 
   pattaya: {
@@ -218,6 +222,8 @@ const beachData = {
       "https://kongthaijeen.com/wp-content/uploads/2023/03/188.jpg",
       "https://storage-wp.thaipost.net/2022/09/%E0%B8%A1%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%871-%E0%B8%8A%E0%B8%B2%E0%B8%A2%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2.jpg",
     ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31108.809956631332!2d100.84252887431643!3d12.933331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310297e2fee3fe03%3A0x74a84e1422ec1d0a!2z4Lir4Liy4LiU4Lie4Lix4LiX4Lii4Liy!5e0!3m2!1sth!2sth!4v1752870554541!5m2!1sth!2sth",
   },
 
   bangsaen: {
@@ -246,6 +252,8 @@ const beachData = {
       "https://www.chillpainai.com/src/wewakeup/scoop/images/fbc1f32c84072f600be5440ae3236f85c845d186.jpg",
       "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1675415100/blog/lqqqoaaor1hg4estbo9x.jpg",
     ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15532.203872089296!2d100.90203301182171!3d13.284755576539586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b4b023600ccf%3A0x9270912877b9184a!2z4Lir4Liy4LiU4Lia4Liy4LiH4LmB4Liq4LiZ!5e0!3m2!1sth!2sth!4v1752870523351!5m2!1sth!2sth",
   },
 
   kohlarn: {
@@ -274,6 +282,8 @@ const beachData = {
       "https://img.wongnai.com/p/1920x0/2020/08/21/61c3877e32314c4d86ed462d2fb499d7.jpg",
       "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1679602430/blog/waqn2rx6ppowizxztkl1.jpg",
     ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31110.775687764974!2d100.77830544999999!3d12.917555949999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310298386eef76d9%3A0x12b39d7dc3ae41ea!2z4LmA4LiB4Liy4Liw4Lil4LmJ4Liy4LiZ!5e0!3m2!1sth!2sth!4v1752870356912!5m2!1sth!2sth",
   },
 
   jomtien: {
@@ -302,6 +312,8 @@ const beachData = {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEHYw5uXmAXg701kmGv9DNu0FgCaS7VIuM3A&s",
       "https://lh4.googleusercontent.com/proxy/NDrkEGvLN7OLk9LrxnLOJuGhUwl7brlJhBZMFLX58ShBQz1cY2tiemojON0gjL-QPfCsZv_RlBhW-mS2fyjzZr8jG9Xt073Bwtel",
     ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31114.308903296722!2d100.85297291208093!3d12.88915407925983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310296910356fe17%3A0xe9d09ef173c1958f!2z4Lir4Liy4LiU4LiI4Lit4Lih4LmA4LiX4Li14Lii4LiZ!5e0!3m2!1sth!2sth!4v1752870453235!5m2!1sth!2sth",
   },
 };
 
@@ -426,7 +438,6 @@ function openBeachModal(beachId) {
   document.getElementById("beachMainImage").src = beach.images[0];
   document.getElementById("beachMainImage").alt = beach.title;
 
-  // Activities
   const activitiesList = document.getElementById("beachActivities");
   activitiesList.innerHTML = "";
   beach.activities.forEach((activity) => {
@@ -435,7 +446,6 @@ function openBeachModal(beachId) {
     activitiesList.appendChild(li);
   });
 
-  // Info
   const infoGrid = document.getElementById("beachInfo");
   infoGrid.innerHTML = "";
   Object.entries(beach.info).forEach(([key, value]) => {
@@ -445,7 +455,18 @@ function openBeachModal(beachId) {
     infoGrid.appendChild(infoItem);
   });
 
-  // Thumbnails
+  const mapContainer = document.getElementById("map-container");
+  mapContainer.innerHTML = ""; // ล้างแผนที่เก่าออกก่อน
+
+  if (beach.mapEmbedUrl) {
+    const iframe = document.createElement("iframe");
+    iframe.src = beach.mapEmbedUrl;
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("loading", "lazy");
+    iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    mapContainer.appendChild(iframe);
+  }
+
   const thumbnailsContainer = document.getElementById("beachThumbnails");
   thumbnailsContainer.innerHTML = "";
   beach.images.forEach((image, index) => {
@@ -458,6 +479,7 @@ function openBeachModal(beachId) {
     thumbnailsContainer.appendChild(thumbnail);
   });
 
+  // --- แสดง Modal ---
   document.getElementById("beachModal").style.display = "block";
   document.body.style.overflow = "hidden";
 }

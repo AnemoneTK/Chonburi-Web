@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -47,31 +51,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: var(--transition);
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-}
-
-.btn:hover {
-  background-color: var(--dark-color);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-}
-
-.btn-small {
-  padding: 8px 16px;
-  font-size: 14px;
+  display: block;
 }
 
 .section-title {
@@ -104,7 +84,7 @@ header {
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition: padding 0.3s ease;
 }
 
 .navbar {
@@ -112,12 +92,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+  transition: var(--transition);
 }
 
 .logo h1 {
   font-size: 1.8rem;
   color: var(--primary-color);
   font-weight: 700;
+  margin: 0;
 }
 
 .nav-menu {
@@ -133,6 +115,7 @@ header {
   font-weight: 500;
   transition: var(--transition);
   position: relative;
+  padding-bottom: 5px;
 }
 
 .nav-link:hover {
@@ -142,7 +125,7 @@ header {
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -171,7 +154,7 @@ header {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2024/03/%E0%B8%94%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B8%99%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-2024-05-23T122306.610.png");
   background-size: cover;
   background-position: center;
@@ -189,9 +172,31 @@ header {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--light-color),
+    var(--white),
+    var(--secondary-color),
+    var(--light-color)
+  );
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: wave-text-animation 5s linear infinite;
+  text-shadow: none;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes wave-text-animation {
+  0% {
+    background-position: 400% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero h2 {
@@ -204,6 +209,59 @@ header {
   font-size: 1.2rem;
   margin-bottom: 30px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.hero .btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 119, 182, 0.4);
+}
+
+.hero .btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 180, 216, 0.5);
+}
+
+.hero .btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+  z-index: -1;
+}
+
+.hero .btn:hover:before {
+  width: 250px;
+  height: 250px;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
 }
 
 /* About Section */
@@ -338,58 +396,6 @@ header {
   color: var(--white);
 }
 
-/* Attractions Section */
-.attractions {
-  padding: 100px 0;
-  background-color: var(--light-gray);
-}
-
-.attractions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.attraction-item {
-  position: relative;
-  height: 250px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.attraction-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.attraction-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: var(--white);
-  transform: translateY(100px);
-  transition: var(--transition);
-}
-
-.attraction-item:hover img {
-  transform: scale(1.1);
-}
-
-.attraction-item:hover .attraction-overlay {
-  transform: translateY(0);
-}
-
-.attraction-overlay h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
 /* Marine Life Section */
 .marine-life {
   padding: 100px 0;
@@ -437,7 +443,6 @@ header {
 /* Tourism Info Section */
 .tourism-info {
   padding: 100px 0;
-  /* background-color: var(--light-gray); */
 }
 
 .info-cards {
@@ -471,137 +476,105 @@ header {
   color: var(--dark-color);
 }
 
-/* Newsletter Section */
-.newsletter {
-  padding: 80px 0;
-  background-image: linear-gradient(
-      rgba(0, 119, 182, 0.9),
-      rgba(0, 119, 182, 0.9)
-    ),
-    url("images/newsletter-bg.jpg");
-  background-size: cover;
-  background-position: center;
+/* Contact Us Section */
+.contact-us {
+  padding: 100px 0;
+  background-color: var(--light-gray);
+}
+
+/* สไตล์สำหรับข้อมูลส่วนกลางที่เพิ่มเข้ามาใหม่ */
+.team-common-info {
   text-align: center;
-  color: var(--white);
-}
-
-.newsletter h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.newsletter p {
+  margin-bottom: 40px; /* เพิ่มระยะห่างก่อนถึงการ์ดรายชื่อ */
+  color: var(--gray);
   font-size: 1.1rem;
-  margin-bottom: 30px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.6;
 }
 
-#newsletter-form {
-  display: flex;
-  max-width: 600px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 10px;
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
   justify-content: center;
 }
 
-#newsletter-form input {
-  flex: 1;
-  min-width: 300px;
-  padding: 15px 20px;
-  border-radius: 30px;
-  border: none;
-  font-size: 16px;
-  font-family: "Kanit", sans-serif;
-}
-
-#newsletter-form .btn {
-  background-color: var(--dark-color);
-}
-
-#newsletter-form .btn:hover {
-  background-color: var(--black);
-}
-
-/* Contact Section */
-.contact {
-  padding: 100px 0;
-}
-
-.contact-content {
+.team-member {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding: 30px 20px;
+  transition: var(--transition);
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  flex-direction: column; /* จัดเรียงจากบนลงล่าง */
 }
 
-.contact-info {
-  flex: 1;
-  min-width: 300px;
+.team-member:hover {
+  transform: translateY(-10px);
 }
 
-.contact-item {
-  margin-bottom: 30px;
+.team-member img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid var(--primary-color);
 }
 
-.contact-item i {
-  font-size: 2rem;
+.team-member h3 {
+  font-size: 1.4rem;
+  color: var(--dark-color);
+  font-weight: 600;
+  margin-bottom: 20px; /* เพิ่มระยะห่างให้มากขึ้น */
+  line-height: 1.4;
+  flex-grow: 1; /* ทำให้ชื่อขยายเต็มพื้นที่ที่เหลือ ดัน contact ลงไปข้างล่าง */
+}
+
+.team-member h3 span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+/* ลบ p tag ออกไปเพราะไม่ได้ใช้แล้ว */
+.team-member p {
+  display: none;
+}
+
+.member-contact {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.member-contact a {
   color: var(--primary-color);
-  margin-bottom: 15px;
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex; /* ใช้ flex เพื่อจัดเรียงไอคอนกับข้อความ */
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
 }
 
-.contact-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.member-contact a:hover {
   color: var(--dark-color);
 }
 
-.social-media {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.social-icon:hover {
-  background-color: var(--dark-color);
-  transform: translateY(-5px);
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-family: "Kanit", sans-serif;
-  font-size: 16px;
-}
-
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
+/* === โค้ดที่แก้ไขสำหรับจัดตำแหน่งไอคอน === */
+.member-contact a i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  width: 20px; /* กำหนดความกว้างคงที่ให้ไอคอน */
+  text-align: center; /* จัดให้ตัวไอคอนอยู่กึ่งกลางพื้นที่ที่กำหนด */
 }
 
 /* Footer */
@@ -619,138 +592,10 @@ footer {
   margin-bottom: 50px;
 }
 
-.footer-logo {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-logo h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: var(--white);
-}
-
-.footer-links {
-  flex: 2;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-links-column {
-  flex: 1;
-  min-width: 150px;
-}
-
-.footer-links-column h3 {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  color: var(--light-color);
-}
-
-.footer-links-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-links-column ul li a {
-  color: var(--light-gray);
-  transition: var(--transition);
-}
-
-.footer-links-column ul li a:hover {
-  color: var(--accent-color);
-  padding-left: 5px;
-}
-
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background-color: var(--white);
-    width: 100%;
-    text-align: center;
-    transition: var(--transition);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-menu li {
-    margin: 15px 0;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .beach-slider {
-    overflow-x: auto;
-    padding-bottom: 20px;
-  }
-
-  .beach-card {
-    min-width: 250px;
-  }
-
-  .contact-content {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .stat-item {
-    min-width: 100%;
-  }
-
-  #newsletter-form {
-    flex-direction: column;
-  }
-
-  #newsletter-form input {
-    min-width: 100%;
-  }
 }
 
 /* Modal Styles */
@@ -764,6 +609,7 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -832,21 +678,29 @@ footer {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* New Modal Body Layout */
 .modal-body {
-  padding: 30px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 5fr;
   gap: 30px;
-  flex-wrap: wrap;
+  padding: 20px 30px;
+}
+
+.modal-column-left,
+.modal-column-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .modal-gallery {
-  flex: 1;
-  min-width: 300px;
+  min-width: 0;
 }
 
 .main-image {
   width: 100%;
-  height: 300px;
+  height: auto;
+  aspect-ratio: 16 / 10;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -857,7 +711,6 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
 }
 
 .thumbnail-gallery {
@@ -889,16 +742,12 @@ footer {
   object-fit: cover;
 }
 
-.modal-info {
-  flex: 1;
-  min-width: 300px;
-}
-
 .info-section {
   margin-bottom: 25px;
 }
 
-.info-section h3 {
+.info-section h3,
+.info-section-left h3 {
   color: var(--dark-color);
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -909,7 +758,7 @@ footer {
 .info-section p {
   line-height: 1.8;
   color: var(--gray);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .info-section ul {
@@ -922,7 +771,7 @@ footer {
   padding-left: 25px;
   position: relative;
   color: var(--gray);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .info-section ul li::before {
@@ -935,7 +784,7 @@ footer {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
 
@@ -952,8 +801,75 @@ footer {
   margin-bottom: 5px;
 }
 
-/* Responsive Modal */
+/* Map Container Styles */
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* Aspect ratio 4:3 */
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px; /* Adjust based on header height */
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .beach-slider {
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+
+  .beach-card {
+    min-width: 250px;
+  }
+
   .modal-content {
     width: 95%;
     margin: 5% auto;
@@ -967,37 +883,22 @@ footer {
   .modal-header h2 {
     font-size: 2rem;
   }
-
-  .modal-body {
-    padding: 20px;
-    flex-direction: column;
-  }
-
-  .main-image {
-    height: 250px;
-  }
 }
 
 @media (max-width: 576px) {
-  .modal-header h2 {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
     font-size: 1.8rem;
   }
 
-  .main-image {
-    height: 200px;
+  .stat-item {
+    min-width: 100%;
   }
 
   .info-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* Add cursor pointer to clickable attraction items */
-.attraction-item {
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.attraction-item:hover {
-  transform: scale(1.02);
 }
